@@ -10,7 +10,7 @@ function init() {
 		var assetsPath = "./media/";
 		var sounds = [
 			{src: "ting.wav", id: "ting"},
-			{src: "ting.wav", id: "ting2"},
+			{src: "dang1.wav", id: "dang"},
 			{src: "dong.wav", id: "dong"},
 			{src: "ci.wav", id: "ci"},
 			{src: "da1.wav", id: "da"},
@@ -31,9 +31,25 @@ function soundLoaded(event) {
 };	
 
 // 播放
+var nowColor = 0;
 function PlayAudio(target) {
 	var instance = createjs.Sound.play(target.id);
+
+	var Arraycolor = new Array(
+		"#621624",
+		"#856d72",
+		"#a35c8f",
+		"#66c18c",
+		"#dfc243",
+		"#f7c173"
+		);
+	if(nowColor == (Arraycolor.length - 1)) {
+		nowColor = 0
+	}
+	nowColor++;
+	document.body.style.backgroundColor = Arraycolor[nowColor];
+
 	if (instance == null || instance.playState == createjs.Sound.PLAY_FAILED) {
 		return;
-	}
+	}	
 };
