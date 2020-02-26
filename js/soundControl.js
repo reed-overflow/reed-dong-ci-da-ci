@@ -53,3 +53,22 @@ function PlayAudio(target) {
 		return;
 	}	
 };
+
+// 键盘
+function keydown(e) {
+	var currKey=0,e=e||event; 
+	currKey=e.keyCode||e.which||e.charCode;
+	if (currKey == 65) // A
+		document.getElementById("dong").click();
+	if (currKey == 83) // S
+		document.getElementById("ci").click();
+	if (currKey == 68) // D
+		document.getElementById("da").click();
+	if (currKey == 81) // Q
+		document.getElementById("dang").click();
+	if (currKey == 69) // E
+		document.getElementById("ting").click();
+		
+};
+
+document.onkeydown = keydown;
