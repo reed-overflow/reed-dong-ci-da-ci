@@ -7,7 +7,7 @@ function init() {
 			return;
 		}
 
-		var assetsPath = "./media/";
+		var assetsPath = "https://cdn.jsdelivr.net/gh/reed-overflow/reed-dong-ci-da-ci/media/";
 		var sounds = [
 			{src: "ting.wav", id: "ting"},
 			{src: "dang1.wav", id: "dang"},
